@@ -41,15 +41,20 @@ def home():
 
 @app.route("/health")
 def health():
-    return jsonify({
-        "status": "healthy"
-    })
+    return jsonify({"status": "healthy"})
 
 
 @app.route("/products")
 def get_products():
     app.logger.info("Products endpoint accessed")
     return jsonify(products)
+
+
+@app.route("/metrics")
+def metrics():
+    return "ecommerce_app_up 1\n", 200, {
+        "Content-Type": "text/plain; version=0.0.4"
+    }
 
 
 if __name__ == "__main__":

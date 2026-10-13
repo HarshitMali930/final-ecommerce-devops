@@ -1,0 +1,38 @@
+replicaCount: 2
+
+image:
+  repository: final-ecommerce
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 5000
+  targetPort: 5000
+  nodePort: 30081
+
+namespace: ecommerce
+
+configMap:
+  name: ecommerce-config
+
+secret:
+  name: ecommerce-secret
+  key: API_KEY
+
+containerPort: 5000
+
+serviceAccount:
+  create: false
+  automount: false
+  name: ""
+
+httpRoute:
+  enabled: false
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: false
+
