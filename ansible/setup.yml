@@ -1,0 +1,14 @@
+---
+- name: E-Commerce DevOps Configuration
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Display project information
+      ansible.builtin.debug:
+        msg: "E-Commerce DevOps project configured successfully"
+
+    - name: Verify Docker service
+      ansible.builtin.command: docker info
+      changed_when: false
