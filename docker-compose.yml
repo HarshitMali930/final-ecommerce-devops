@@ -1,9 +1,25 @@
+
 services:
   ecommerce:
     build:
       context: .
       dockerfile: Dockerfile
+
     container_name: final-ecommerce-compose
+
     ports:
       - "5002:5000"
+
     restart: unless-stopped
+
+    read_only: true
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
+
+    tmpfs:
+      - /tmp
+

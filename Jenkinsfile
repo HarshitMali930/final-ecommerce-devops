@@ -1,4 +1,4 @@
-
+```groovy
 pipeline {
     agent any
 
@@ -22,10 +22,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Creating Python virtual environment and running tests'
+                echo 'Installing dependencies and running tests'
                 sh '''
                     python3 -m venv .venv
-                    .venv/bin/python -m pip install --upgrade pip
                     .venv/bin/python -m pip install -r application/requirements.txt
                     .venv/bin/python -m pytest application/tests/ -v
                 '''
@@ -36,6 +35,20 @@ pipeline {
             steps {
                 echo 'Building Docker image'
                 sh 'docker build -t final-ecommerce:latest .'
+            }
+        }
+
+        stage('Trivy Security Scan') {
+            steps {
+                echo 'Scanning Docker image for HIGH and CRITICAL vulnerabilities'
+                sh '''
+                    mkdir -p reports
+                    trivy image \
+                        --severity HIGH,CRITICAL \
+                        --format json \
+                        --output reports/trivy-jenkins-report.json \
+                        final-ecommerce:latest
+                '''
             }
         }
     }
@@ -54,4 +67,4 @@ pipeline {
         }
     }
 }
-
+```
