@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: prometheus-config
   namespace: ecommerce
+
 data:
   prometheus.yml: |
     global:
@@ -14,7 +15,6 @@ data:
           - targets: ["localhost:9090"]
 
       - job_name: "kubernetes-app"
-        metrics_path: /health
+        metrics_path: /metrics
         static_configs:
           - targets: ["ecommerce-release:5000"]
-
