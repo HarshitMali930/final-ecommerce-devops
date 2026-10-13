@@ -3,38 +3,40 @@
   "Trivy": {
     "Version": "0.74.0"
   },
-  "ReportID": "01a12bbc-f82a-7521-ac08-da6cadd70453",
-  "CreatedAt": "2026-10-11T21:42:47.018337607+05:30",
-  "ArtifactID": "sha256:cfed68af7f4d29c0f539bbf6dea7ce2e53cadaea3bf978fe89fd2d978c4ee302",
-  "ArtifactName": "final-ecommerce-devops-ecommerce:latest",
+  "ReportID": "01a135fb-7d0a-7177-99fb-e8754f8e5489",
+  "CreatedAt": "2026-10-13T21:27:16.426097725+05:30",
+  "ArtifactID": "sha256:09d79d1c3f153982644eab53ab9c21ad8d64d9ad615824d80488234515f01791",
+  "ArtifactName": "final-ecommerce:latest",
   "ArtifactType": "container_image",
   "Metadata": {
-    "Size": 175756800,
+    "Size": 167858688,
     "OS": {
       "Family": "debian",
       "Name": "13.7"
     },
-    "ImageID": "sha256:3e47032f2afe9a8d907beb1cbfaa4efd62c340b65de6a997c929c40ee9bd1da4",
+    "ImageID": "sha256:b5d9f891d473a0cf84e2c55d17c25cae94f4bf00da47567b75d6115b45cb6a46",
     "DiffIDs": [
       "sha256:258ba1f62b513e7bb7492d3cc8ce445e4ef176a14980f193f789b6d7270ae61c",
       "sha256:373ce1c1778b9a35fa1db898d648974a737e314bb3503ac5c988fa42ca1f63d5",
       "sha256:11d89b6e886fe5bea9177eb50df86009b68b75957e4605f2bb472bbb4a76751b",
       "sha256:84dd5a4db43e5a9bfe3a50e18c5b5ad0a8789ea9b894392200ad8a95388a745e",
-      "sha256:1a68745b3ad4ff956c70e98f948d5345bc8c5d920309746d2cd74cc392a64179",
-      "sha256:48229f68405cd2b264b8302becdb7cb4847a5ab74ff3ee1d4a9376d5cfd552e0",
-      "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17",
-      "sha256:c4a1ab97b0958e6f6f342c0ec5f523c8084adc14ba77fbf8a35c50f382e93c3e"
+      "sha256:a0a55323dedecf710aabe0364427013b7a0dcc88ea862517d806c6793f8c2103",
+      "sha256:5e83b0651064ff6532d8e92f7df593ae12b23d0fe5024fdb9e1d1f6217663939",
+      "sha256:c330483b4974558025b8f63ab853b5033927fd7e8c7402e131e0db20afdfe95e",
+      "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4",
+      "sha256:132039f7a9132d8df472d0eaff83bd7a67756f5d21da6daed14a2fa2885a1ffd",
+      "sha256:c88ae91abdee3f41a11302b04ef53dd9866574b65c3aa733d8ef8b98a395d7ae"
     ],
     "RepoTags": [
-      "final-ecommerce-devops-ecommerce:latest"
+      "final-ecommerce:latest"
     ],
     "RepoDigests": [
-      "final-ecommerce-devops-ecommerce@sha256:3e47032f2afe9a8d907beb1cbfaa4efd62c340b65de6a997c929c40ee9bd1da4"
+      "final-ecommerce@sha256:b5d9f891d473a0cf84e2c55d17c25cae94f4bf00da47567b75d6115b45cb6a46"
     ],
-    "Reference": "final-ecommerce-devops-ecommerce:latest",
+    "Reference": "final-ecommerce:latest",
     "ImageConfig": {
       "architecture": "arm64",
-      "created": "2026-10-10T21:10:39.692058966+05:30",
+      "created": "2026-10-13T21:18:35.016824046+05:30",
       "history": [
         {
           "created": "2026-10-05T00:00:00Z",
@@ -93,35 +95,47 @@
           "empty_layer": true
         },
         {
-          "created": "2026-10-10T15:40:33Z",
-          "created_by": "WORKDIR /app",
-          "comment": "buildkit.dockerfile.v0"
-        },
-        {
-          "created": "2026-10-10T15:40:33Z",
-          "created_by": "COPY application/requirements.txt . # buildkit",
-          "comment": "buildkit.dockerfile.v0"
-        },
-        {
-          "created": "2026-10-10T15:40:39Z",
-          "created_by": "RUN /bin/sh -c pip install --no-cache-dir -r requirements.txt # buildkit",
-          "comment": "buildkit.dockerfile.v0"
-        },
-        {
-          "created": "2026-10-10T15:40:39Z",
-          "created_by": "COPY application/app ./app # buildkit",
-          "comment": "buildkit.dockerfile.v0"
-        },
-        {
-          "created": "2026-10-10T15:40:39Z",
-          "created_by": "EXPOSE [5000/tcp]",
-          "comment": "buildkit.dockerfile.v0",
+          "created": "2026-10-11T16:41:30Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1",
           "empty_layer": true
         },
         {
-          "created": "2026-10-10T15:40:39Z",
-          "created_by": "CMD [\"python\" \"app/app.py\"]",
-          "comment": "buildkit.dockerfile.v0",
+          "created": "2026-10-11T16:41:30Z",
+          "created_by": "/bin/sh -c #(nop) WORKDIR /app"
+        },
+        {
+          "created": "2026-10-11T16:41:35Z",
+          "created_by": "/bin/sh -c apt-get update     \u0026\u0026 apt-get upgrade -y     \u0026\u0026 apt-get clean     \u0026\u0026 rm -rf /var/lib/apt/lists/*"
+        },
+        {
+          "created": "2026-10-13T15:48:24Z",
+          "created_by": "/bin/sh -c #(nop) COPY file:746cebd4f354cd186f8ebb3e253b2e741fd2dc5c734d08324105804264a56a20 in . "
+        },
+        {
+          "created": "2026-10-13T15:48:32Z",
+          "created_by": "/bin/sh -c pip install --no-cache-dir -r requirements.txt"
+        },
+        {
+          "created": "2026-10-13T15:48:33Z",
+          "created_by": "/bin/sh -c #(nop) COPY dir:193797b98bab2e63232d4dee9ac6cf8afa406a8aad6b59d896c631be78081da9 in ./app "
+        },
+        {
+          "created": "2026-10-13T15:48:33Z",
+          "created_by": "/bin/sh -c useradd --system --no-create-home appuser     \u0026\u0026 chown -R appuser:appuser /app"
+        },
+        {
+          "created": "2026-10-13T15:48:34Z",
+          "created_by": "/bin/sh -c #(nop)  USER appuser",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-13T15:48:34Z",
+          "created_by": "/bin/sh -c #(nop)  EXPOSE 5000",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-13T15:48:35Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"python\" \"app/app.py\"]",
           "empty_layer": true
         }
       ],
@@ -133,10 +147,12 @@
           "sha256:373ce1c1778b9a35fa1db898d648974a737e314bb3503ac5c988fa42ca1f63d5",
           "sha256:11d89b6e886fe5bea9177eb50df86009b68b75957e4605f2bb472bbb4a76751b",
           "sha256:84dd5a4db43e5a9bfe3a50e18c5b5ad0a8789ea9b894392200ad8a95388a745e",
-          "sha256:1a68745b3ad4ff956c70e98f948d5345bc8c5d920309746d2cd74cc392a64179",
-          "sha256:48229f68405cd2b264b8302becdb7cb4847a5ab74ff3ee1d4a9376d5cfd552e0",
-          "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17",
-          "sha256:c4a1ab97b0958e6f6f342c0ec5f523c8084adc14ba77fbf8a35c50f382e93c3e"
+          "sha256:a0a55323dedecf710aabe0364427013b7a0dcc88ea862517d806c6793f8c2103",
+          "sha256:5e83b0651064ff6532d8e92f7df593ae12b23d0fe5024fdb9e1d1f6217663939",
+          "sha256:c330483b4974558025b8f63ab853b5033927fd7e8c7402e131e0db20afdfe95e",
+          "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4",
+          "sha256:132039f7a9132d8df472d0eaff83bd7a67756f5d21da6daed14a2fa2885a1ffd",
+          "sha256:c88ae91abdee3f41a11302b04ef53dd9866574b65c3aa733d8ef8b98a395d7ae"
         ]
       },
       "config": {
@@ -149,18 +165,15 @@
           "LANG=C.UTF-8",
           "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
           "PYTHON_VERSION=3.12.15",
-          "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a"
+          "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
+          "PYTHONDONTWRITEBYTECODE=1",
+          "PYTHONUNBUFFERED=1"
         ],
-        "Labels": {
-          "com.docker.compose.project": "final-ecommerce-devops",
-          "com.docker.compose.service": "ecommerce",
-          "com.docker.compose.version": "2.40.3"
-        },
+        "User": "appuser",
         "WorkingDir": "/app",
         "ExposedPorts": {
           "5000/tcp": {}
-        },
-        "ArgsEscaped": true
+        }
       }
     },
     "Layers": [
@@ -186,29 +199,39 @@
       },
       {
         "Size": 1536,
-        "Digest": "sha256:ec9a803b309ae9f5435e0607e54eaedf97838b1a80fed9a58a9e5b655457175c",
-        "DiffID": "sha256:1a68745b3ad4ff956c70e98f948d5345bc8c5d920309746d2cd74cc392a64179"
+        "Digest": "sha256:e95d9b2770e561261cdfd3c823fe6b0da88216c94bf02b06dd7cd6bc36457c0e",
+        "DiffID": "sha256:a0a55323dedecf710aabe0364427013b7a0dcc88ea862517d806c6793f8c2103"
+      },
+      {
+        "Size": 605184,
+        "Digest": "sha256:a78b482b74d7bd7485beffe5e76f67e407fad437d5ccaf22489ad2cce6d061e9",
+        "DiffID": "sha256:5e83b0651064ff6532d8e92f7df593ae12b23d0fe5024fdb9e1d1f6217663939"
       },
       {
         "Size": 2560,
-        "Digest": "sha256:0fe3bc8ade09457196bf21d3cb7f95a1a86e82526e20d059b9adc07d536e87b8",
-        "DiffID": "sha256:48229f68405cd2b264b8302becdb7cb4847a5ab74ff3ee1d4a9376d5cfd552e0"
+        "Digest": "sha256:15541704bb5778605ae98213cd7e3c0d571759c5849bd092cbb746f3d2029ed0",
+        "DiffID": "sha256:c330483b4974558025b8f63ab853b5033927fd7e8c7402e131e0db20afdfe95e"
       },
       {
-        "Size": 27033088,
-        "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-        "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+        "Size": 18508800,
+        "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+        "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
       },
       {
-        "Size": 4096,
-        "Digest": "sha256:f626138b947e76e854f5fcc41600e66192b82a9e6c1901039734be5e21e60c33",
-        "DiffID": "sha256:c4a1ab97b0958e6f6f342c0ec5f523c8084adc14ba77fbf8a35c50f382e93c3e"
+        "Size": 7168,
+        "Digest": "sha256:2700213073f11875d2a6bac61c8098010419637121ae396ed329145779170676",
+        "DiffID": "sha256:132039f7a9132d8df472d0eaff83bd7a67756f5d21da6daed14a2fa2885a1ffd"
+      },
+      {
+        "Size": 17920,
+        "Digest": "sha256:f9c43c39a9d33b4f210028128b1a45ab102513a5020de6d3f17d63c030411e5c",
+        "DiffID": "sha256:c88ae91abdee3f41a11302b04ef53dd9866574b65c3aa733d8ef8b98a395d7ae"
       }
     ]
   },
   "Results": [
     {
-      "Target": "final-ecommerce-devops-ecommerce:latest (debian 13.7)",
+      "Target": "final-ecommerce:latest (debian 13.7)",
       "Class": "os-pkgs",
       "Type": "debian",
       "Packages": [
@@ -217,7 +240,7 @@
           "Name": "adduser",
           "Identifier": {
             "PURL": "pkg:deb/debian/adduser@3.152?arch=all\u0026distro=debian-13.7",
-            "UID": "681428a4291e51"
+            "UID": "17a3839c9950603e"
           },
           "Version": "3.152",
           "Arch": "all",
@@ -2333,7 +2356,7 @@
           "Name": "libapt-pkg7.0",
           "Identifier": {
             "PURL": "pkg:deb/debian/libapt-pkg7.0@3.0.3?arch=arm64\u0026distro=debian-13.7",
-            "UID": "f77f568145a37975"
+            "UID": "af1dd18b39b30288"
           },
           "Version": "3.0.3",
           "Arch": "arm64",
@@ -2355,7 +2378,7 @@
             "libc6@2.41-12+deb13u4",
             "libgcc-s1@14.2.0-19",
             "liblz4-1@1.10.0-4",
-            "liblzma5@5.8.1-1+deb13u1",
+            "liblzma5@5.8.1-1+deb13u2",
             "libssl3t64@3.5.7-1~deb13u3",
             "libstdc++6@14.2.0-19",
             "libsystemd0@257.13-1~deb13u1",
@@ -3316,7 +3339,7 @@
           "Name": "libffi8",
           "Identifier": {
             "PURL": "pkg:deb/debian/libffi8@3.4.8-2?arch=arm64\u0026distro=debian-13.7",
-            "UID": "ecfffe57a484957b"
+            "UID": "5f7e05240d572e86"
           },
           "Version": "3.4.8",
           "Release": "2",
@@ -3387,7 +3410,7 @@
           "Name": "libgdbm6t64",
           "Identifier": {
             "PURL": "pkg:deb/debian/libgdbm6t64@1.24-2?arch=arm64\u0026distro=debian-13.7",
-            "UID": "1e79917def5607b7"
+            "UID": "d034f98c82796944"
           },
           "Version": "1.24",
           "Release": "2",
@@ -3603,18 +3626,18 @@
           "AnalyzedBy": "dpkg"
         },
         {
-          "ID": "liblzma5@5.8.1-1+deb13u1",
+          "ID": "liblzma5@5.8.1-1+deb13u2",
           "Name": "liblzma5",
           "Identifier": {
-            "PURL": "pkg:deb/debian/liblzma5@5.8.1-1%2Bdeb13u1?arch=arm64\u0026distro=debian-13.7",
-            "UID": "913c0be226196c48"
+            "PURL": "pkg:deb/debian/liblzma5@5.8.1-1%2Bdeb13u2?arch=arm64\u0026distro=debian-13.7",
+            "UID": "d1f0b3b9c0efc28a"
           },
           "Version": "5.8.1",
-          "Release": "1+deb13u1",
+          "Release": "1+deb13u2",
           "Arch": "arm64",
           "SrcName": "xz-utils",
           "SrcVersion": "5.8.1",
-          "SrcRelease": "1+deb13u1",
+          "SrcRelease": "1+deb13u2",
           "Licenses": [
             "0BSD",
             "GPL-2.0-or-later",
@@ -3639,8 +3662,8 @@
             "libc6@2.41-12+deb13u4"
           ],
           "Layer": {
-            "Digest": "sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba",
-            "DiffID": "sha256:258ba1f62b513e7bb7492d3cc8ce445e4ef176a14980f193f789b6d7270ae61c"
+            "Digest": "sha256:a78b482b74d7bd7485beffe5e76f67e407fad437d5ccaf22489ad2cce6d061e9",
+            "DiffID": "sha256:5e83b0651064ff6532d8e92f7df593ae12b23d0fe5024fdb9e1d1f6217663939"
           },
           "InstalledFiles": [
             "/usr/lib/aarch64-linux-gnu/liblzma.so.5.8.1",
@@ -3757,7 +3780,7 @@
           "Name": "libncursesw6",
           "Identifier": {
             "PURL": "pkg:deb/debian/libncursesw6@6.5%2B20250216-2?arch=arm64\u0026distro=debian-13.7",
-            "UID": "30131ff613aa40a6"
+            "UID": "307da5aad90ee40f"
           },
           "Version": "6.5+20250216",
           "Release": "2",
@@ -4282,7 +4305,7 @@
           "Name": "libreadline8t64",
           "Identifier": {
             "PURL": "pkg:deb/debian/libreadline8t64@8.2-6?arch=arm64\u0026distro=debian-13.7",
-            "UID": "8ba14dc029ce645b"
+            "UID": "5498ab56d57b72c1"
           },
           "Version": "8.2",
           "Release": "6",
@@ -6708,7 +6731,7 @@
           "Name": "readline-common",
           "Identifier": {
             "PURL": "pkg:deb/debian/readline-common@8.2-6?arch=all\u0026distro=debian-13.7",
-            "UID": "e762758a1681f62e"
+            "UID": "c4beab42d2a9a634"
           },
           "Version": "8.2",
           "Release": "6",
@@ -7854,7 +7877,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:fea005fafdd0a0380c58d4bd19953292a29960fa78fe2af8c18d99c5be476bde",
+          "Fingerprint": "sha256:332a73796cd69def29b2fa3ce9abd23124713f7314ccbed2f1dcd526818e392e",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -7908,7 +7931,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:af86eb4f87648d22bc49afc673bf8d1e3612392f6cf48fce26b1870560598cc4",
+          "Fingerprint": "sha256:2621009c7477bb818146d872c0738767db4e3c405f6622f464acfc80b1d59d3e",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -7957,7 +7980,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:345f16a7418ea62df837acb88bb22efef50dde5005ad9c3e63753bf5b920c926",
+          "Fingerprint": "sha256:cbe8daed3b2b3d3c4b826543f860aef44c16415bb2e9e64c9b362c96b777e47b",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -8004,7 +8027,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:b25314d94786a826ee8bf4727a789f776126c9abc65a77181a3546ce1b35feca",
+          "Fingerprint": "sha256:c36064063f39ce74a698e6506e860f4d6bcc220bb0ce90f31876455076080d5e",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -8052,7 +8075,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:dd1319a4f2ec686c22200e2aad33cf38ef3344019ccbb50a13a94a33ce1c78dd",
+          "Fingerprint": "sha256:472e42b68e8abc457f070d64da319a92257d69634cf17047f6b548791e55422b",
           "Title": "acl: Symlink traversal privilege escalation via libacl functions",
           "Description": "acl before version 2.4.0 contains a symlink traversal vulnerability in the libacl pathname-based functions acl_get_file(), acl_set_file(), acl_extended_file(), and acl_delete_def_file() that allows local attackers to escalate privileges by replacing any pathname component with a symbolic link. Attackers who control any component of a pathname processed by a privileged caller can redirect ACL read or write operations to arbitrary files or directories, enabling unauthorized manipulation of access control lists and local privilege escalation.",
           "Severity": "HIGH",
@@ -8131,7 +8154,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:3c12f8c07b3c01c1699d633488e72ff1eee07ca1fbf4ab8687dcd907e8453581",
+          "Fingerprint": "sha256:b1ccf0fa7ad4cae312239d857895ab5ae40bfa1c1dca738399ebccb3441ccdbd",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -8185,7 +8208,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:91f6e57afb11c690e2fb4baa54d33c76f6cb75690e50bc112f13642078ad9186",
+          "Fingerprint": "sha256:d1890de45d06bf38c39263074ed6355b9d937864f827dcee1536d491c3ed34f0",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -8234,7 +8257,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:3332ae906e08f1e5a97ce4f0ad97dc871fbd6c5cb230e1015a2d245c7595c6de",
+          "Fingerprint": "sha256:aba50792916daf395f867b0f0abfe60c222e4aa4993eaa4d6b955fdf7cd2519e",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -8281,7 +8304,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:974733b22c0409658dc61d9fa0aa7b6b6a63a3cc113953f5017a3567c97b3c4b",
+          "Fingerprint": "sha256:eebf3718a2d9efdf0d775056194e6013defd061bb8fcb4304e3ee94b8a3fd020",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -8329,7 +8352,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:96ee882034e5ca95e73157f2a643eab19e23e509c9cb191759250b7ff98f0fcc",
+          "Fingerprint": "sha256:ed31a447e730c50930162140d041e325ad799a30d9165454ebddd84ec3d6a3eb",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -8383,7 +8406,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:5272d7748d057b669e801fd6cf1ec8a89dfc10540b6bc726757b19855d1cc9cb",
+          "Fingerprint": "sha256:2881a04ddd2573a67075d4977276db6f609e19a209c3e8402cfa842a2b0424b7",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -8432,7 +8455,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:cc3221a637cebeaed05b1950fe3a47a5d687d66573b8b98a5d3258e02cf878d8",
+          "Fingerprint": "sha256:7476e55929609624158068c016a4851ac6a6222e5028ccf6ecee86e5dce0f799",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -8479,7 +8502,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:7bb27a00c890ea5444c37d20e7200f33572c17ec87bb9af8f8ccc404f338a58e",
+          "Fingerprint": "sha256:8eb779ced4f4e97543334add5fb596382c57706b157d5bd0a982cc3a055b67a2",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -8527,7 +8550,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:79db0e96edcc8a9e651094780aa8c538d9debdb9eb21e17f01a0dff0449e1bac",
+          "Fingerprint": "sha256:d1efbcb590773ac61cdec9bdb8eaf23d71dfcc35c4183fa08f5419c41e9d194c",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -8581,7 +8604,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:c1aa549ce3a32dbaa696a35123871d170de541083ce9458f27223b0837579dae",
+          "Fingerprint": "sha256:8b7c0de0be9cd606c28f98d5e825a22aedcedbb71b50e7fed7c1af0aa46a69be",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -8630,7 +8653,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:46405a15b8e38083833f898137ee593fdc2b06689ed43e978b22426b0f1a83e5",
+          "Fingerprint": "sha256:49c5fb73df34f66ba9b28296d26525da39d3d40d6de71e07ecca70f1021984d2",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -8677,7 +8700,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:59a8eb0ae2af84ef836b9d0664fee06acc91ca2018d53d2e515b61ec3711d62b",
+          "Fingerprint": "sha256:5e493a79e35d8d93f41388535ae8ee929ce9f60ec607d46b3e97aa0ab8e4b510",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -8711,7 +8734,7 @@
           "PkgName": "libncursesw6",
           "PkgIdentifier": {
             "PURL": "pkg:deb/debian/libncursesw6@6.5%2B20250216-2?arch=arm64\u0026distro=debian-13.7",
-            "UID": "30131ff613aa40a6"
+            "UID": "307da5aad90ee40f"
           },
           "InstalledVersion": "6.5+20250216-2",
           "Status": "affected",
@@ -8726,7 +8749,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:4038645aa4d1631d5ed662b6e242e78fe8f1c1830cf88729facd1f26229d5b17",
+          "Fingerprint": "sha256:27c41b9a00302b5dc5e07f21915b2b6ea3e36dc0b8ebf139800b90d2dfcc83c6",
           "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
           "Description": "The infocmp command-line tool in ncurses before 6.5-20251213 has a stack-based buffer overflow in analyze_string in progs/infocmp.c.",
           "Severity": "HIGH",
@@ -8808,7 +8831,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:930c9fbbc6e86b5e58b155e9fbfd346dc47eefb97f897c2be54de5a47f157099",
+          "Fingerprint": "sha256:b48cde871f91000d8169b9431c94da15840a5a2bc58fe95967c40d4a7f499e0e",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -8862,7 +8885,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:d499f8e80fa57a6f58648d7a44f576a634f43d5cdd64de740a8df92bec66fdc4",
+          "Fingerprint": "sha256:3fabe632399acaf08ceddc712f574ba049291e14a23fe11056b5620de7c4dfa3",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -8911,7 +8934,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:4a5dc14990b2c9429e04c496b026d54ab2f81524ade490fd794fc39a842f6c94",
+          "Fingerprint": "sha256:cba04ec3985bd522ae957bd608c08524e83ffaf4dce1102f302be926111daf38",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -8958,7 +8981,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:eaaa47d752e855ccca4946bcd1a2718a8f80bffb86f484cb9eb313488f3ca464",
+          "Fingerprint": "sha256:c2bfebeee9d6ba4917ec28b8f265a6a275b9e8236385efa2d55bedca36ac9b7b",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -9006,7 +9029,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:2e353c5cbf1145dadd024b22ae81e3bd5342bfb05bf1d382943e5cab18a05e3a",
+          "Fingerprint": "sha256:fb99ccb6916333d3a3fca80368b536f4eecfa3101fb3d75d6a664762f8c4d283",
           "Title": "systemd: systemd-homed: Local privilege escalation via missing home-record signature verification",
           "Description": "systemd-homed contains a local privilege escalation bug via arbitrary system group addition to a local, logged in, homed-managed user",
           "Severity": "HIGH",
@@ -9057,7 +9080,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:07281a1b0576e52c312d6ef2e1416782d464322e0bc608e0d77f05e7b11ab032",
+          "Fingerprint": "sha256:dc9144dbbf20f8628308d39d16b096ffa6e5731477babf9671ac693806470af8",
           "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
           "Description": "The infocmp command-line tool in ncurses before 6.5-20251213 has a stack-based buffer overflow in analyze_string in progs/infocmp.c.",
           "Severity": "HIGH",
@@ -9139,7 +9162,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:254283854bdc2e4ddc3d7c295b91c59d9e720eb94e7670089f4ac45ec3560865",
+          "Fingerprint": "sha256:ad83749d2a73123272d6aa61c06741d0589f12e62b33a5c7cfe936f9cbe4a176",
           "Title": "systemd: systemd-homed: Local privilege escalation via missing home-record signature verification",
           "Description": "systemd-homed contains a local privilege escalation bug via arbitrary system group addition to a local, logged in, homed-managed user",
           "Severity": "HIGH",
@@ -9189,7 +9212,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:42faf93b4c002f57db16b2c70b014624d5e358fc2122413dc968a92da668a239",
+          "Fingerprint": "sha256:5116cc619a89f165432cb062980af8dde25cde9e17a5c35b3c57289f03a4aab8",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -9243,7 +9266,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:d50ce9551b6027968784ad5dca432af492429a98341a8d06df4a0d8a0fd2ea5f",
+          "Fingerprint": "sha256:7fe8b5fd126542605b05df3de32afbd171904c670ff2e1ad868912cb22ff22b0",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -9292,7 +9315,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:91918024736d5d71825013a806cf1ca1693ff8e57c0c9eec7b23f9268653912f",
+          "Fingerprint": "sha256:70e55016ef44b9c02d0d6a798b889a8de138e9c8d36d5cc1122b5a452fb92523",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -9339,7 +9362,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:743fa149fe2a2ae42088bad9ef0f5471ba9bab4ad0177efd2fda9a9bb8ca53d0",
+          "Fingerprint": "sha256:a744204cfa25cf268c54f22b42e7db68090fa739afbc998d517367c46fd7fedc",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -9387,7 +9410,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:88488eefb59c0fca2e0302a115c0990a56defe65c90a6cf9fbe68dd52f95b5a9",
+          "Fingerprint": "sha256:c362fbc9dd1345e613e1c4c527620261b956594d0c5d8b3d63d8a42d355ffbdf",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -9441,7 +9464,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:08047d4457f853ad445d8b782e7de64e53923c3b09b3468d30bfd722d75388b0",
+          "Fingerprint": "sha256:aa5a4b2736c16b52a8bb57ce910f63ea470f0dcbed340ddc9b7626aaa67ddfc7",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -9490,7 +9513,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:6f02b8eb270d55757b9f0a972fdca7cc8a4b5166d591c53d1cadb4c5362bcb35",
+          "Fingerprint": "sha256:5f2dc13f65d46ac87919366b022cd7980cf2ea8ffa5f6447a1f3def42f47852a",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -9537,7 +9560,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:39faede2d340ecc674a4a5ba459f135c28b81de48c64d1137c53d6cbafb13f21",
+          "Fingerprint": "sha256:df5c688ccb6ae9d3252449d9a63a6ebe64ca01fd78d3b55a334486066987074d",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -9585,7 +9608,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:43337b5c1df85b09394df0ffbf23ba433f85a6aae1645676326bf23a6c527143",
+          "Fingerprint": "sha256:c6d3c80d652387c47a5acb729ec43772fa91560d81d1c7e758084c6903fa1394",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -9639,7 +9662,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:67d1749ec3c5a34156a63246ad9f732a7bf7be5ccc83ee945c3dba4ba2a69c1a",
+          "Fingerprint": "sha256:959f3c66ada2a9102318764e93069ee63b6db30b23cc1b431d566803bae371fe",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -9688,7 +9711,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:6ad313a7c344b949fd189a52482831f6c2df9fed4d457896702d414a57e1865c",
+          "Fingerprint": "sha256:89a6c45dc6f696262b4521d453bdad618988d10468f902bc8a944f208620bdc2",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -9735,7 +9758,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:498ce2702195f8d837eb58142cb7e304fb29b1aeccd58badfe37c0fa74d0ec72",
+          "Fingerprint": "sha256:e4c8a0296f82de332b1490695eb484bada8c86b2904486fab7cd62760732b092",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -9784,7 +9807,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:a8d5451b4f31fcec492b94fbabc4341e57a944231830580477548e4d0d7c3569",
+          "Fingerprint": "sha256:0b128afd4a7a781b3cbc18e129469ac65f1bbb09d83cc1c466678618362b17ca",
           "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
           "Description": "The infocmp command-line tool in ncurses before 6.5-20251213 has a stack-based buffer overflow in analyze_string in progs/infocmp.c.",
           "Severity": "HIGH",
@@ -9867,7 +9890,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:eb195ecdb541a93f333f3bf125cbf9a374bebbbdfcd3d42812827bbb1aca12fc",
+          "Fingerprint": "sha256:fc616568347ea818a50c7956b78d7a944ac4bccc555d01571167ac148dcdae46",
           "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
           "Description": "The infocmp command-line tool in ncurses before 6.5-20251213 has a stack-based buffer overflow in analyze_string in progs/infocmp.c.",
           "Severity": "HIGH",
@@ -9950,7 +9973,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:ba4147380d02ab45c1dbaff8f76967323ab0bd22b7302b952d3950dbf0998334",
+          "Fingerprint": "sha256:d93d8826134387dfc2582b8a75011195dfbd00f75e39bade275fff26705e0576",
           "Title": "perl-Archive-Tar: perl-Archive-Tar: Denial of Service via crafted tar header with large entry size",
           "Description": "Archive::Tar versions before 3.10 for Perl allow memory exhaustion via attacker controlled entry size field in tar header.\n\n_read_tar() reads each entry's payload with $handle-\u003eread($$data, $block), where $block is derived from the entry's 12-byte size field in the tar header with no upper bound on that value.\n\nA crafted header declaring a multi-gigabyte size causes Perl to allocate a scalar of that size.",
           "Severity": "HIGH",
@@ -10018,7 +10041,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:e527faedc8f29fb3cb846d2aab4406cff4f9820a11ad223e6330143f4555d10c",
+          "Fingerprint": "sha256:828b3dca9e19024c975b1bcb3239ce6f47118da275f83b5e1278cfe5b8c2a253",
           "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
           "Description": "util-linux versions through 2.41.5 and 2.42.2 fail to check mount helper exit status before running post-mount hooks, allowing unprivileged users to execute privileged operations on pre-existing filesystems. Attackers can exploit X-mount.idmap or X-mount.owner hooks to clone filesystems with inherited suid bits or modify target inode permissions after a helper fails, achieving privilege escalation.",
           "Severity": "HIGH",
@@ -10072,7 +10095,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:df52427693ce047d303c2c927f4f334f82b97357854397890ce3aa8490911eb5",
+          "Fingerprint": "sha256:7c2866030fe102cc11a03b7bc47aceea5dcdc6b12c2ed5a857774dba539e4492",
           "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
           "Description": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.",
           "Severity": "HIGH",
@@ -10121,7 +10144,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:7dd9ca0cfa8ef09ded394abed1cb2b948a5b90f64a37bf8031d1d6480d864b80",
+          "Fingerprint": "sha256:574232f73210f15f3cb6947cbe50252f5446afe200dc17360e5aa5962c7119e4",
           "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
           "Description": "The X-mount.subdir option uses a detached-tree fast path on Linux 6.15 and later and passes the configured subdirectory to open_tree() with AT_SYMLINK_NOFOLLOW. That flag does not stop intermediate symlink traversal or keep resolution inside the newly mounted filesystem. A local unprivileged user with an fstab-authorized X-mount.subdir entry can attach a host path at the intended mountpoint.",
           "Severity": "HIGH",
@@ -10168,7 +10191,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:9665ffa9c2cfe8ce5daebe2bfe969db0d5ed4af3278700e3a8cf3e45d2dbffcd",
+          "Fingerprint": "sha256:5aaea2947de24c56b61d1ffb7387ebb7ac1f28e76f5cd09f959a2718f56b5a49",
           "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
           "Description": "A flaw was found in util-linux. Restricted bind mounts take the source path from fstab but do not pin that source before the privileged mount. A local unprivileged user who can replace the authorized source or a writable ancestor can redirect SUID mount(8) to bind another host directory. If the fstab entry also sets X-mount.owner, X-mount.group, or X-mount.mode, root then changes ownership or mode on that redirected inode.",
           "Severity": "HIGH",
@@ -10214,8 +10237,8 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/flask-3.1.2.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10231,8 +10254,8 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/jinja2-3.1.6.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10248,8 +10271,8 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10265,8 +10288,8 @@
             "BSD-2-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/pygments-2.21.0.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10282,8 +10305,8 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/werkzeug-3.1.9.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10299,8 +10322,8 @@
             "MIT"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/blinker-1.9.0.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10316,8 +10339,8 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/click-8.5.0.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10333,8 +10356,8 @@
             "MIT"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/iniconfig-2.3.1.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10350,8 +10373,8 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/itsdangerous-2.2.0.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10367,8 +10390,8 @@
             "Apache-2.0 OR BSD-2-Clause"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/packaging-26.3.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10401,8 +10424,8 @@
             "MIT"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/pluggy-1.6.0.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -10418,8 +10441,8 @@
             "MIT"
           ],
           "Layer": {
-            "Digest": "sha256:e944d5f99742a99004c26b1e3a45b5e0d36834ea5a26b7a4b3e57937ca92dee4",
-            "DiffID": "sha256:68ce9c301acd10bb5d8e102246da9e73c66171accafac34b370d50c983cf6f17"
+            "Digest": "sha256:b8a46845185555dc534a1aa0fa146d1cfdb81b641d70260b2ae582b9fe357041",
+            "DiffID": "sha256:ebe8b531c165f0838edc7123129e919c38340f32a6d8eb54b52399e9074c70c4"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/pytest-8.4.2.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
