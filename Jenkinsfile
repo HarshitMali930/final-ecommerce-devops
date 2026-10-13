@@ -1,4 +1,3 @@
-```groovy
 pipeline {
     agent any
 
@@ -15,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Checking Python application syntax'
+                echo 'Checking Python syntax'
                 sh 'python3 -m py_compile application/app/app.py'
             }
         }
@@ -57,14 +56,11 @@ pipeline {
         success {
             echo 'Pipeline completed successfully!'
         }
-
         failure {
             echo 'Pipeline failed. Check Console Output.'
         }
-
         always {
             echo 'Pipeline execution finished.'
         }
     }
 }
-```
