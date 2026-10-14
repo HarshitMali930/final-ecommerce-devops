@@ -25,6 +25,7 @@ pipeline {
                 sh '''
                     python3 -m venv .venv
                     .venv/bin/python -m pip install -r application/requirements.txt
+                    .venv/bin/python -m pip install pytest==9.0.3
                     .venv/bin/python -m pytest application/tests/ -v
                 '''
             }
