@@ -50,6 +50,37 @@ def get_products():
     return jsonify(products)
 
 
+
+@app.route("/recommendations")
+def recommendations():
+    from flask import request
+
+    category = request.args.get("category", "").strip().lower()
+    raw_max_price = request.args.get("max_price")
+    try:
+        max_price = float(raw_max_price) if raw_max_price else None
+        if max_price is not None and max_price < 0:
+            raise ValueError
+    except ValueError:
+        return jsonify({"error": "max_price must be a non-negative number"}), 400
+
+    results = [
+        product for product in products
+        if (not category or product["category"].lower() == category)
+        and (max_price is None or product["price"] <= max_price)
+    ]
+
+    app.logger.info(
+        "Product recommendations requested: category=%s max_price=%s results=%d",
+        category or "all", max_price, len(results)
+    )
+
+    return jsonify({
+        "recommendations": results,
+        "count": len(results),
+        "method": "content-based filtering"
+    })
+
 @app.route("/metrics")
 def metrics():
     return "ecommerce_app_up 1\n", 200, {
